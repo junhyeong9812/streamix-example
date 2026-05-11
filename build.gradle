@@ -4,9 +4,9 @@ plugins {
     id 'io.spring.dependency-management' version '1.1.7'
 }
 
-group = 'com.simple'
-version = '0.0.1-SNAPSHOT'
-description = 'FileService - Streamix Reference Implementation'
+group = 'io.github.junhyeong9812'
+version = '3.0.0'
+description = 'Streamix Example - Reference Spring Boot consumer for Streamix v3'
 
 java {
     toolchain {
@@ -23,10 +23,12 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
 
-    // Streamix v2.0.0 - 6 FileTypes, File Validation, SRP Services
-    implementation 'io.github.junhyeong9812:streamix-spring-boot-starter:2.0.0'
+    // Streamix v3.0.0 - Dashboard redesign (Cinema/Editorial Brutalist), dark/light theme,
+    // ES Module JS, dependency-free dashboard. Consumer API (@EnableStreamix,
+    // StreamixProperties, REST endpoints) is unchanged from v2.
+    implementation 'io.github.junhyeong9812:streamix-spring-boot-starter:3.0.0'
 
-    // Database Drivers (모두 포함, 환경변수로 선택)
+    // Database Drivers (all bundled, selected at runtime via env vars)
     runtimeOnly 'com.h2database:h2'
     runtimeOnly 'org.postgresql:postgresql'
     runtimeOnly 'com.mysql:mysql-connector-j'
