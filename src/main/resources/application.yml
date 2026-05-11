@@ -1,6 +1,6 @@
 spring:
   application:
-    name: simple-file-service
+    name: streamix-example
 
   # 데이터소스 설정 (환경변수로 오버라이드 가능)
   datasource:
@@ -31,13 +31,13 @@ spring:
       max-file-size: ${MAX_FILE_SIZE:100MB}
       max-request-size: ${MAX_REQUEST_SIZE:100MB}
 
-# Streamix 설정 (v2.0.0)
+# Streamix 설정 (v3.0.0)
 streamix:
   storage:
     base-path: ${STREAMIX_STORAGE_BASE_PATH:./streamix-data}
-    # v2.0.0 신규: 최대 파일 크기 (바이트, 기본 100MB)
+    # 최대 파일 크기 (바이트, 기본 100MB)
     max-file-size: ${STREAMIX_STORAGE_MAX_FILE_SIZE:104857600}
-    # v2.0.0 신규: 허용 파일 타입 (빈 값 = 전체 허용)
+    # 허용 파일 타입 (빈 값 = 전체 허용)
     # 가능한 값: IMAGE, VIDEO, AUDIO, DOCUMENT, ARCHIVE, OTHER
     allowed-types: ${STREAMIX_STORAGE_ALLOWED_TYPES:}
   thumbnail:
