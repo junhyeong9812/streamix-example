@@ -23,10 +23,11 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
 
-    // Streamix v3.0.0 - Dashboard redesign (Cinema/Editorial Brutalist), dark/light theme,
-    // ES Module JS, dependency-free dashboard. Consumer API (@EnableStreamix,
-    // StreamixProperties, REST endpoints) is unchanged from v2.
-    implementation 'io.github.junhyeong9812:streamix-spring-boot-starter:3.0.0'
+    // Streamix v3.0.1 - Dashboard/Monitoring activation fix.
+    // v3.0.1: AutoConfiguration.imports 추가로 Dashboard/Monitoring 정상 자동 구성.
+    //         Thymeleaf 3.1 보안 제약 호환 (T() → #strings.listJoin).
+    // 컨슈머 API(@EnableStreamix, REST 엔드포인트) 변경 없음.
+    implementation 'io.github.junhyeong9812:streamix-spring-boot-starter:3.0.1'
 
     // Database Drivers (all bundled, selected at runtime via env vars)
     runtimeOnly 'com.h2database:h2'
